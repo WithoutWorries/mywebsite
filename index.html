@@ -16,32 +16,11 @@
         header h1, header p { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
         section { padding: 60px 20px; max-width: 1100px; margin: auto; background: white; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px; }
         h2, h3 { color: #0044cc; }
-        .cta { 
-            background: #FF5722; 
-            color: white; 
-            padding: 15px 30px; 
-            text-align: center; 
-            margin-top: 20px; 
-            cursor: pointer; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            display: inline-block; 
-            text-decoration: none; 
-            transition: 0.3s; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .cta:hover { background: #E64A19; transform: translateY(-3px); }
-        footer { background: #222; color: white; text-align: center; padding: 30px; margin-top: 50px; font-size: 0.9em; }
-        form { display: flex; flex-direction: column; max-width: 600px; margin: auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); }
-        input, textarea { margin-bottom: 15px; padding: 14px; font-size: 16px; border: 2px solid #007BFF; border-radius: 8px; }
-        button { background: #007BFF; color: white; padding: 14px; border: none; cursor: pointer; border-radius: 50px; font-size: 16px; font-weight: bold; transition: 0.3s; }
-        button:hover { background: #0056b3; transform: translateY(-3px); }
-        .patreon { text-align: center; margin-top: 50px; }
-        .patreon a { background: #FF424D; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; transition: 0.3s; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
-        .patreon a:hover { background: #C32E3B; transform: translateY(-3px); }
-        .industry-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-top: 40px; }
-        .industry-images img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); transition: 0.3s; }
-        .industry-images img:hover { transform: translateY(-5px); }
+        .industry-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-top: 40px; text-align: center; }
+        .industry-item { position: relative; }
+        .industry-item img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); transition: 0.3s; }
+        .industry-item img:hover { transform: translateY(-5px); }
+        .industry-item p { margin-top: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -52,39 +31,37 @@
     <section>
         <h2>Why Choose My Services?</h2>
         <p>With over two decades of experience in safety and reliability engineering across industries like aerospace, marine, pharmaceuticals, and renewable energy, I provide expert guidance to ensure the integrity and efficiency of your projects.</p>
-        <h3>Key Expertise:</h3>
-        <ul>
-            <li>Risk assessment & failure analysis</li>
-            <li>Reliability, Maintainability & Safety (RAMS) implementation</li>
-            <li>Obsolescence management & whole-life cost analysis</li>
-            <li>Compliance with industry standards (IEC, MIL, SAE, EN50126, etc.)</li>
-        </ul>
         <h3>Notable Industries:</h3>
-        <p>My expertise extends across aerospace, marine, pharmaceuticals, oil & gas, rail, and renewable energy, bringing industry-leading best practices to your engineering challenges.</p>
-        
         <div class="industry-images">
-            <img src="aerospace.jpg" alt="Aerospace Industry">
-            <img src="marine.jpg" alt="Marine Industry">
-            <img src="pharmaceuticals.jpg" alt="Pharmaceuticals Industry">
-            <img src="oil_gas.jpg" alt="Oil & Gas Industry">
-            <img src="rail.jpg" alt="Rail Industry">
-            <img src="renewable_energy.jpg" alt="Renewable Energy Industry">
-            <img src="finance.jpg" alt="Financial forecasting">
+            <div class="industry-item">
+                <img src="aerospace.jpg" alt="Aerospace Industry">
+                <p>Aerospace</p>
+            </div>
+            <div class="industry-item">
+                <img src="marine.jpg" alt="Marine Industry">
+                <p>Marine</p>
+            </div>
+            <div class="industry-item">
+                <img src="pharmaceuticals.jpg" alt="Pharmaceuticals Industry">
+                <p>Pharmaceuticals</p>
+            </div>
+            <div class="industry-item">
+                <img src="oil_gas.jpg" alt="Oil & Gas Industry">
+                <p>Oil & Gas</p>
+            </div>
+            <div class="industry-item">
+                <img src="rail.jpg" alt="Rail Industry">
+                <p>Rail</p>
+            </div>
+            <div class="industry-item">
+                <img src="renewable_energy.jpg" alt="Renewable Energy Industry">
+                <p>Renewable Energy</p>
+            </div>
+            <div class="industry-item">
+                <img src="finance.jpg" alt="Financial Forecasting">
+                <p>Financial Forecasting</p>
+            </div>
         </div>
-        
-        <div class="patreon">
-            <h3>Support My Work on Patreon</h3>
-            <p>I specialize in forecasting and probability-based predictions across multiple industries. If you value my insights, consider supporting me on Patreon.</p>
-            <a href="https://www.patreon.com/c/withoutworries" target="_blank">Visit My Patreon</a>
-        </div>
-        
-        <h3>Contact Me</h3>
-        <form action="https://formspree.io/f/mdkeobop" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
     </section>
     <footer>
         <p>&copy; 2025 Fraser Mackie - All Rights Reserved</p>
