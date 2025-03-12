@@ -21,6 +21,13 @@
         .industry-item img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); transition: 0.3s; }
         .industry-item img:hover { transform: translateY(-5px); }
         .industry-item p { margin-top: 10px; font-weight: bold; }
+        .patreon { text-align: center; margin-top: 50px; }
+        .patreon a { background: #FF424D; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; transition: 0.3s; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+        .patreon a:hover { background: #C32E3B; transform: translateY(-3px); }
+        form { display: flex; flex-direction: column; max-width: 600px; margin: auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); }
+        input, textarea { margin-bottom: 15px; padding: 14px; font-size: 16px; border: 2px solid #007BFF; border-radius: 8px; }
+        button { background: #007BFF; color: white; padding: 14px; border: none; cursor: pointer; border-radius: 50px; font-size: 16px; font-weight: bold; transition: 0.3s; }
+        button:hover { background: #0056b3; transform: translateY(-3px); }
     </style>
 </head>
 <body>
@@ -62,6 +69,18 @@
                 <p>Financial Forecasting</p>
             </div>
         </div>
+        <div class="patreon">
+            <h3>Support My Work on Patreon</h3>
+            <p>I specialize in forecasting and probability-based predictions across multiple industries. If you value my insights, consider supporting me on Patreon.</p>
+            <a href="https://www.patreon.com/c/withoutworries" target="_blank">Visit My Patreon</a>
+        </div>
+        <h3>Contact Me</h3>
+        <form action="https://formspree.io/f/mdkeobop" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
     <footer>
         <p>&copy; 2025 Fraser Mackie - All Rights Reserved</p>
