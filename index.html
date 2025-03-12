@@ -32,6 +32,8 @@
         .industry-item img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); transition: 0.3s ease-in-out; }
         .industry-item img:hover { transform: scale(1.05); }
         .industry-item p { margin-top: 10px; font-weight: bold; }
+        .tradingview { text-align: center; margin-top: 50px; }
+        .tradingview iframe { width: 100%; max-width: 800px; height: 400px; border: none; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); }
         .cta { background: #FF5722; color: white; padding: 15px 30px; text-align: center; border-radius: 50px; font-weight: bold; display: inline-block; text-decoration: none; transition: 0.3s ease-in-out; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
         .cta:hover { background: #E64A19; transform: scale(1.05); }
         .patreon { text-align: center; margin-top: 50px; }
@@ -46,55 +48,15 @@
 </head>
 <body>
     <header>
-        <h1>Fraser Mackie - Consultant Engineer</h1>
+        <h1>Fraser Mackie</h1>
         <p>Specialist in Safety & Reliability Analysis</p>
     </header>
     <section>
-        <h2>Why Choose My Services?</h2>
-        <p>With over two decades of experience in safety and reliability engineering across industries like aerospace, marine, pharmaceuticals, and renewable energy, I provide expert guidance to ensure the integrity and efficiency of your projects.</p>
-        <h3>Notable Industries:</h3>
-        <div class="industry-images">
-            <div class="industry-item">
-                <img src="aerospace.jpg" alt="Aerospace Industry">
-                <p>Aerospace</p>
-            </div>
-            <div class="industry-item">
-                <img src="marine.jpg" alt="Marine Industry">
-                <p>Marine</p>
-            </div>
-            <div class="industry-item">
-                <img src="pharmaceuticals.jpg" alt="Pharmaceuticals Industry">
-                <p>Pharmaceuticals</p>
-            </div>
-            <div class="industry-item">
-                <img src="oil_gas.jpg" alt="Oil & Gas Industry">
-                <p>Oil & Gas</p>
-            </div>
-            <div class="industry-item">
-                <img src="rail.jpg" alt="Rail Industry">
-                <p>Rail</p>
-            </div>
-            <div class="industry-item">
-                <img src="renewable_energy.jpg" alt="Renewable Energy Industry">
-                <p>Renewable Energy</p>
-            </div>
-            <div class="industry-item">
-                <img src="finance.jpg" alt="Financial Forecasting">
-                <p>Financial Forecasting</p>
-            </div>
+        <h2>My Latest TradingView Ideas</h2>
+        <div class="tradingview">
+            <iframe src="https://www.tradingview.com/widgetembed/?user=without_worries&container_id=tradingview-widget" allowtransparency="true"></iframe>
         </div>
-        <div class="patreon">
-            <h3>Support My Work on Patreon</h3>
-            <p>I specialize in forecasting and probability-based predictions across multiple industries. If you value my insights, consider supporting me on Patreon.</p>
-            <a href="https://www.patreon.com/c/withoutworries" target="_blank">Visit My Patreon</a>
-        </div>
-        <h3>Contact Me</h3>
-        <form action="https://formspree.io/f/mdkeobop" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <p style="text-align: center; margin-top: 20px;"><a class="cta" href="https://www.tradingview.com/u/without_worries/" target="_blank">Visit My TradingView Profile</a></p>
     </section>
     <footer>
         <p>&copy; 2025 Fraser Mackie - All Rights Reserved</p>
