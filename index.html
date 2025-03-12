@@ -11,6 +11,10 @@
         .cta { background: #007BFF; color: white; padding: 15px; text-align: center; margin-top: 20px; cursor: pointer; }
         .cta:hover { background: #0056b3; }
         footer { background: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+        form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
+        input, textarea { margin-bottom: 10px; padding: 10px; font-size: 16px; }
+        button { background: #007BFF; color: white; padding: 10px; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
     </style>
 </head>
 <body>
@@ -28,14 +32,18 @@
             <li>Obsolescence management & whole-life cost analysis</li>
             <li>Compliance with industry standards (IEC, MIL, SAE, EN50126, etc.)</li>
         </ul>
-        <h3>Notable Projects:</h3>
-        <p>From working with Rolls-Royce on lean burn flow scheduling to contributing to the safety of the Type 212CD submarine, my cross-industry experience allows me to bring best practices to your engineering challenges.</p>
-        <div class="cta" onclick="window.location.href='mailto:fraser@frasermackie.com';">
-            Contact Me Today
-        </div>
+        <h3>Notable Industries:</h3>
+        <p>My expertise extends across aerospace, marine, pharmaceuticals, oil & gas, rail, and renewable energy, bringing industry-leading best practices to your engineering challenges.</p>
+        <h3>Contact Me</h3>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
     <footer>
-        <p>Contact: fraser@frasermackie.com | Phone: +49(0)152 0454 1802</p>
+        <p>&copy; 2025 Fraser Mackie - All Rights Reserved</p>
     </footer>
 </body>
 </html>
