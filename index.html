@@ -56,6 +56,63 @@
         .btn:hover { background-color: #ddd; }
         .btn.active { background-color: #666; color: white; }
     </style>
+    <style>
+        @media (max-width: 1024px) {
+            .parallax {
+                background-attachment: scroll;
+                height: 500px;
+                font-size: 2em;
+            }
+            .parallax-1, .parallax-2, .parallax-3, .parallax-4 {
+                background-size: cover;
+                background-position: center;
+            }
+            .industry-images {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+            .filterDiv {
+                width: 100px;
+                line-height: 80px;
+            }
+            .btn {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 768px) {
+            .parallax {
+                height: 400px;
+                font-size: 1.8em;
+            }
+            section {
+                padding: 40px 15px;
+            }
+            .industry-images {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            }
+            .btn {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+            form input, form textarea, form button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .parallax {
+                height: 300px;
+                font-size: 1.5em;
+            }
+            .btn {
+                padding: 6px 8px;
+                font-size: 12px;
+            }
+            .industry-images {
+                grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            }
+        }
+    </style>
     </head>
 <body>
     <div class="parallax parallax-1">Fraser Mackie</div>
