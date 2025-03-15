@@ -11,7 +11,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: 100% auto;
-            height: 1200px;
+            height: 1000px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -113,8 +113,43 @@
             }
         }
     </style>
+    <style>
+        .floating-menu {
+            position: fixed;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .floating-menu a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .floating-menu a:hover {
+            background: #007BFF;
+        }
+        .icon { font-size: 24px; }
+    </style>
     </head>
 <body>
+    <div class="floating-menu">
+        <a href="#home" class="icon">🏠</a>
+        <a href="#services" class="icon">🔧</a>
+        <a href="#industries" class="icon">🏭</a>
+        <a href="#trading" class="icon">📈</a>
+        <a href="#contact" class="icon">📩</a>
+    </div>
     <div class="parallax parallax-1">Fraser Mackie</div>
     <section style="padding: 270px 20px;">
         <h2>Solutions to Problems with Scalable Results</h2>
