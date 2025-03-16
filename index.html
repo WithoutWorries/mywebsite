@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Metadata and Page Configuration -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fraser Mackie</title>
-    <style>
+    
+<!-- Global Styles -->
+<style>
+
+/* Full-Screen Dropdown Menu Styles */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 9999;
+}
+.fullscreen-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.fullscreen-menu nav ul li {
+    display: inline;
+}
+.fullscreen-menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.fullscreen-menu nav ul li a:hover {
+    background: #007BFF;
+    border-radius: 5px;
+}
         body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: white; color: #333; }
         .parallax {
             background-attachment: fixed;
@@ -21,11 +60,11 @@
             font-weight: bold;
         }
         .parallax-1 { background-image: url('hero-background.jpg'); }
-        .parallax-2 { background-image: url('industries.jpg'); }
+        .parallax-2 { background-image: url('industries.jpg'); background-size: cover; background-position: center; height: 500px; }
         .parallax-3 { background-image: url('trading.jpg'); }
         section { padding: 60px 20px; max-width: 1100px; margin: auto; background: white; box-shadow: none;  border-radius: 12px; }
-        h1 { font-size: 2.0em; }
-h2 { font-size: 1.1em; }
+        h1 { font-size: 2.5em; }
+h2 { font-size: 1.5em; }
 h3 { font-size: 1.2em; }
 
 h2, h3 { color: #0056b3; text-align: center; }
@@ -34,8 +73,10 @@ h2, h3 { color: #0056b3; text-align: center; }
         .cta { background: #FF5722; color: white; padding: 15px 30px; text-align: center; border-radius: 50px; font-weight: bold; display: inline-block; text-decoration: none; }
         .cta:hover { background: #E64A19; }
     </style>e
+
+<!-- Filter and Button Styles -->
 <style>
-        .filterDiv {
+.filterDiv {
             float: left;
             background-color: #2196F3;
             color: #ffffff;
@@ -60,8 +101,10 @@ h2, h3 { color: #0056b3; text-align: center; }
         .btn:hover { background-color: #ddd; }
         .btn.active { background-color: #666; color: white; }
     </style>
-    <style>
-        @media (max-width: 1024px) {
+    
+<!-- Responsive Design -->
+<style>
+@media (max-width: 1024px) {
             .parallax {
                 background-attachment: scroll;
                 height: 500px;
@@ -117,8 +160,10 @@ h2, h3 { color: #0056b3; text-align: center; }
             }
         }
     </style>
-    <style>
-        .floating-menu {
+    
+<!-- Floating Menu Styles -->
+<style>
+.floating-menu {
             position: fixed;
             top: 50%;
             left: 10px;
@@ -146,19 +191,42 @@ h2, h3 { color: #0056b3; text-align: center; }
         .icon { font-size: 24px; }
     </style>
     </head>
+
+<!-- Page Body -->
 <body>
-    <div class="floating-menu">
+
+<!-- Full-Screen Dropdown Menu -->
+<div class="fullscreen-menu">
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#active-investment">Active Investment</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+    
+<!-- Floating Navigation Menu -->
+<div class="floating-menu">
         <a href="#home" class="icon">🏠</a>
         <a href="#services" class="icon">🔧</a>
         <a href="https://www.tradingview.com/u/without_worries/" class="icon" target="_blank">📈</a>
         <a href="#contact" class="icon">📩</a>
     </div>
-    <div class="parallax parallax-1" style="display: flex; justify-content: flex-end; align-items: center; padding-right: 100px; text-align: right; width: 100%;">
+    
+<!-- Hero Section -->
+<div class="parallax parallax-1" style="display: flex; justify-content: flex-end; align-items: center; padding-right: 100px; text-align: right; width: 100%;">
         <h1 style="text-align: right;">Fraser Mackie</h1>
-        
-        <h2><br><br><br><br><br><br><br><br>Supportability Analysis<br>Reliability prediction<br>Safety analysis<br>Market forecasts</h2>
     </div>
-    <section style="padding: 270px 20px;">
+    
+<div class="parallax parallax-2"></div>
+
+<!-- Solutions Section -->
+<section style="padding: 270px 20px;">
         <h2>Safety & Reliability Prediction, Ownership Cost Analysis, Stock Price Prediction & Analysis, and More</h2>
         <h2>Solutions to Problems with Scalable Results</h2>
         <p id="typing-effect"></p>
@@ -176,19 +244,25 @@ h2, h3 { color: #0056b3; text-align: center; }
         </script>
     </section>
     
-    <div class="filter-container">
+    
+<!-- Industry Filter Section -->
+<div class="filter-container">
         <button class="btn active" onclick="filterSelection('all')"> Show all</button>
         <button class="btn" onclick="filterSelection('aerospace')"> Aerospace</button>
         <button class="btn" onclick="filterSelection('marine')"> Marine</button>
         <button class="btn" onclick="filterSelection('pharmaceuticals')"> Pharmaceuticals</button>
     </div>
-    <div class="container">
+    
+<!-- Filtered Industry Listings -->
+<div class="container">
         <div class="filterDiv aerospace">Aerospace</div>
         <div class="filterDiv marine">Marine</div>
         <div class="filterDiv pharmaceuticals">Pharmaceuticals</div>
     </div>
-    <script>
-        function filterSelection(c) {
+    
+<!-- JavaScript for Filtering Industries -->
+<script>
+function filterSelection(c) {
             var x, i;
             x = document.getElementsByClassName("filterDiv");
             if (c == "all") c = "";
@@ -227,23 +301,31 @@ h2, h3 { color: #0056b3; text-align: center; }
         }
         filterSelection("all");
     </script>
-    <section>
-        <h2>Notable Industries</h2>
+    
+<!-- Notable Industries Section -->
+<section>
+<h2>Notable Industries</h2>
         <div class="industry-images">
             <div class="industry-item"><img src="aerospace.jpg" alt="Aerospace Industry"><p>Aerospace</p></div>
             <div class="industry-item"><img src="marine.jpg" alt="Marine Industry"><p>Marine</p></div>
             <div class="industry-item"><img src="pharmaceuticals.jpg" alt="Pharmaceuticals Industry"><p>Pharmaceuticals</p></div>
         </div>
     </section>
-    <div class="parallax parallax-3">Latest TradingView Insights</div>
-    <section>
-        <h2>My Latest TradingView Ideas</h2>
+    
+<!-- TradingView Insights Section -->
+<div class="parallax parallax-3">Latest Active Investment Insights</div>
+    
+<!-- TradingView Widget Embed -->
+<section>
+<h2>My Latest Active Investment Ideas</h2>
         <div class="tradingview">
             <script src="https://s3.tradingview.com/external-embedding/embed-widget-ideas.js">{"username": "without_worries","width": "100%","height": "400","theme": "light"}</script>
         </div>
         <p style="text-align: center;"><a class="cta" href="https://www.tradingview.com/u/without_worries/" target="_blank">Visit My TradingView Profile</a></p>
     </section>
-    <footer style="position: relative; width: 100%; bottom: 0; text-align: center; padding: 20px; background: #222; color: white;">
+    
+<!-- Footer and Contact Section -->
+<footer style="position: relative; width: 100%; bottom: 0; text-align: center; padding: 20px; background: #222; color: white;">
         <p>&copy; 2025 Fraser Mackie - All Rights Reserved</p>
         <div class="parallax parallax-4">Contact Me</div>
     <section>
