@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata and Page Configuration -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraser Mackie</title>
+    
+<!-- Global Styles -->
+<style>
+
+/* Floating Menu Styles */
+.floating-menu {
+    position: fixed;
+    z-index: 10002;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+.floating-menu a {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.floating-menu a:hover {
+    background: #007BFF;
+}
+.icon { font-size: 24px; }
+
+
+/* Dropdown Menu Styling */
+.fullscreen-menu nav ul li {
+    position: relative;
+}
+.fullscreen-menu nav ul li ul {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    text-align: left;
+    border-radius: 5px;
+}
+.fullscreen-menu nav ul li:hover ul {
+    display: block;
+}
+.fullscreen-menu nav ul li ul li {
+    display: block;
+}
+.fullscreen-menu nav ul li ul li a {
+    display: block;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.fullscreen-menu nav ul li ul li a:hover {
+    background: #007BFF;
+}
+
+/* Prevent Horizontal Scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+
+
+/* Full-Screen Dropdown Menu Styles */
+.fullscreen-menu {
+    position: fixed; z-index: 10001;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 10001;
+}
+.fullscreen-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.fullscreen-menu nav ul li {
+    display: inline;
+}
+.fullscreen-menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.fullscreen-menu nav ul li a:hover {
+    background: #007BFF;
+    border-radius: 5px;
+}
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: white; color: #333; }
+        .parallax {
+            background-attachment: fixed;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        
+        
+        
+        
+         /* Follower Counter Styles */
+        .follower-counter {
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #0056b3;
+        }
+        
+        
+
+  
+</style>
+</head>
+
+
+
+
+
+
+<!-- Page Body -->
+<body id="top">
+
+<!-- Hero Section -->
+<div class="parallax" id="hero" style="background-image: url('hero-background.jpg'); height: auto; min-height: 100vh; background-size: contain; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; position: relative;">
+<h1 style="color: white; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); font-size: 2em; width: 100%; text-align: right; padding-right: 20px;">Fraser Mackie</h1>
+<div style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); font-size: 0.7em; color: white; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">
+    Supportability Analysis - Reliability Prediction - Safety Analysis - Stock Market Forecasts
+    
+</div>
+
+</div>
+<section style="padding: 100px 20px; text-align: center; background-color: white; border-radius: 10px; box-shadow: none; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Reliability, Risk & Cost—Optimised for the Future</h2>
+    <p style="font-size: 1.2em; font-weight: bold;">Specialising in safety and reliability analysis across a wide range of industries.</p>
+    <p style="font-size: 1.1em; line-height: 1.6;">Expertise covers both deterministic and probabilistic analysis—measuring risk based on known physical limits, environmental conditions, or historical data.</p>
+    <p style="font-size: 1.1em; line-height: 1.6;">Client needs vary significantly. Some projects are driven by cost and time constraints, while others prioritise a deeper understanding of performance and design success.</p>
+    <p style="font-size: 1.2em; font-weight: bold; color: #d9534f;">Insights from past projects are applied to deliver tailored, high-impact solutions, ensuring the best possible outcomes.</p>
+</section>
+
+
+
+
+
+
+
+<div style="margin-bottom: 100px;"></div>
+
+<!-- Full-Screen Dropdown Menu -->
+<div class="fullscreen-menu">
+    <nav>
+        <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#Expertise">Expertise</a></li>
+            <li>
+                <a href="#industries">Industries</a>
+                <ul>
+                    <li><a href="#aerospace">Aerospace</a></li>
+                    <li><a href="#marine">Marine</a></li>
+                    <li><a href="#finance">Finance</a></li>
+                    <li><a href="#health-care">Health Care</a></li>
+                    <li><a href="#green-energy">Green Energy</a></li>
+                    <li><a href="#rail">Rail</a></li>
+                </ul>
+            </li>
+            <li><a href="#active-investment">Active Investment</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Industry Sections -->
+
+<!-- Responsive Cutout Text Effect and Customer Logo Grid with Clickable Popups using HTML Templates for Aerospace Section -->
+<style>
+    .cutout-text {
+        background-image: url('aerospace.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: transparent;
+        font-size: 8vw;
+        font-weight: bold;
+        text-transform: capitalize;
+        -webkit-background-clip: text;
+        background-clip: text;
+        position: relative;
+        text-align: center;
+    }
+
+    .cutout-text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: -1;
+    }
+
+    /* Customer Logos Grid */
+    .customer-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 20px;
+        background-color: #f8f9fa;
+    }
+
+        .logo-container {
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            height: 120px; /* Fixed height for uniform logo containers */
+        }
+        
+
+    .logo-caption {
+        font-size: 0.8em;
+        color: #0056b3;
+        margin-top: 5px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+    .logo-container:hover .logo-caption {
+        opacity: 1;
+    }
+    
+    
+
+    .customer-logos img {
+        width: auto;
+        max-width: 150px;
+        max-height: 100px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.8;
+        transition: opacity 0.3s, filter 0.3s;
+        cursor: pointer;
+    }
+
+    .customer-logos img:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+
+    /* Popup styles */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 10003;
+    }
+
+    .popup-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+        text-align: left;
+        position: relative;
+        overflow-y: auto;
+        max-height: 80vh;
+        line-height: 1.8;
+    }
+
+    .popup-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-top: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+
+
+    .close-popup {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .hidden-content {
+        display: none;
+    }
+    
+    
+    
+    /* used to report tradingview count */
+      .follower-counter {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .follower-counter .count {
+    font-size: 3em;
+    font-weight: bold;
+    color: #0056b3;
+  }
+
+
+  .follower-counter .label {font-size: 1.2em;color: #333;}
+    
+    
+    .finance-logos .logo-container {
+    flex-direction: row; /* Ensures horizontal alignment */
+    align-items: center;
+    justify-content: center; 
+}
+    
+</style>
+
+
+
+
+
+<section class="cutout-text">Aerospace </section>
+<div class="parallax" id="aerospace" style="background-image: url('aerospace.jpg'); height: 500px;"></div>
+<section id="aerospace-experience" style="text-align: center; padding: 0px 20px; max-width: 1100px; margin: auto;">
+<h2 style="color: #0056b3; font-size: 2em;">Fixed and Rotary Wing Aircraft Safety & Reliability analysis</h2>
+    
+<p style="font-size: 1.1em; line-height: 1.6;">Experience in the aerospace sector includes collaborating with industry leaders such as Rolls-Royce Aerospace, Marenco Swisshelicopter AG, and MTU Aero Engines. Specialising in safety and reliability analysis, tasks undertaken include assessing complex systems such as the TP400 Engine Protection & Monitoring Unit for military aircraft and Lean Burn technology for Rolls-Royce engines. Proven methodologies like Failure Modes & Effects Analysis (FMEA), Weibull Analysis, and Monte Carlo simulations have been employed to predict failure rates and enhance system safety. Additionally, composite material reliability for FACC AG components has been addressed, ensuring compliance with rigorous standards like EASA (European Aviation Safety Agency) for airworthiness. These services help ensure high reliability and cost-efficiency, making them a valuable investment for any aerospace organisation.</p>
+</section>
+
+
+<!-- Customer Logos for Aerospace Sector -->
+<div class="customer-logos">
+	
+	<div class="logo-container" onclick="openPopup('rollsroyce')">
+    <img src="logo-rollsroyce.png" alt="Rolls-Royce Aerospace" onclick="openPopup('rollsroyce')">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+    
+    <div class="logo-container" onclick="openPopup('marenco')">
+    <img src="logo-marenco.png" alt="Marenco Swisshelicopter AG" onclick="openPopup('marenco')">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+   
+    <div class="logo-container" onclick="openPopup('mtu')">
+    <img src="logo-mtu.png" alt="MTU Aero Engines">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+    
+    <div class="logo-container" onclick="openPopup('facc')">
+    <img src="logo-facc.png" alt="FACC AG" onclick="openPopup('facc')">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+   
+</div>
+
+
+
+
+
+<!-- Hidden Descriptive Content for Popups -->
+
+<!-- Popup Container -->
+<div id="rollsroyce" class="hidden-content">
+
+    <h3>Rolls-Royce Aerospace</h3>
+    <h3>Reliability & Failure Modes, Effects, & Criticality analysis.</h3>
+    <p></p>
+
+    The Rolls-Royce BR700-725 powerplant is a high-performance aircraft engine designed with rigorous reliability and safety standards for aviation applications. Developed from the proven BR710 engine, the BR700-725 was meticulously assessed to achieve exceptional reliability and operational efficiency, ensuring minimal in-flight shutdowns (IFSD) and unscheduled engine removals (UER).
+<p></p>
+A comprehensive reliability prediction analysis was conducted, leveraging advanced Failure Mode, Effects, and Criticality Analysis (FMECA). This process systematically identified potential failure modes, assessed their operational impacts, and quantified critical performance metrics, including IFSD and mean time between unscheduled engine removals (MTBUER).
+<p></p>
+    <img src="rollsroyce-project.jpg" alt="Rolls-Royce Project">
+<p></p>
+
+The analysis covered every aspect of the engine, including the nacelle, fan module, internal gearbox, high-pressure compressor (HPC), combustor, high-pressure turbine (HPT), low-pressure turbine (LPT), accessory gearbox, oil system, and engine air systems. Each module was rigorously evaluated for reliability, adhering to stringent contractual and certification standards, which required an IFSD rate of less than 0.01 per 1,000 engine flight hours (EFH) and an MTBUER greater than 20,000 EFH.
+<p></p>
+The final reliability predictions demonstrated exceptional performance, surpassing project requirements.
+<p></p>
+
+</div>
+
+</div>
+
+
+<div id="marenco" class="hidden-content">
+    <h3>Marenco Swisshelicopter AG</h3>
+    <h3>Qualitative Failure Modes & Effects Analysis (FMEA)</h3>
+
+<p></p>
+The SKYe SH09 helicopter Main Gearbox (MGB), manufactured by Marenco Swisshelicopter AG, is a critical component responsible for safely transmitting power from the engine to the main and tail rotors. Due to its central role in helicopter flight operations, ensuring the MGB's reliability and safety is essential.
+<p></p>
+A detailed Functional Failure Modes & Effects Analysis (FMEA) was conducted to systematically identify potential failure modes, assess their effects, and determine their detectability and severity. This qualitative analysis followed aerospace industry standards outlined in SAE ARP 4761, aiming to proactively address potential issues early in the design phase.
+<p></p>
+    <img src="marenco-project.jpg" alt="Marenco Project">
+    <p></p>
+The FMEA process involved a thorough examination of each gearbox component, from individual bearings and gears to the rotor mast and lubrication system. Each part was analysed for possible failure modes, such as fatigue, installation errors, misalignments, and contamination, alongside their cascading effects on helicopter performance and safety.
+<p></p>
+    <img src="marenco3-project.jpg" alt="Marenco Project">
+<p></p>
+Significant attention was given to ensuring that critical parts met stringent reliability requirements, emphasising potential risk areas such as installation errors and material fatigue, notably hydrogen embrittlement. Additionally, extensive use of detection methods including chip detectors, cockpit visual displays, and pilot sensory feedback ensured timely identification and mitigation of issues.
+<p></p>
+    <img src="marenco2-project.jpg" alt="Marenco Project">
+<p></p>
+Conclusions drawn from the analysis highlighted the most frequent failure causes, notably installation errors and hydrogen embrittlement, along with their potential impacts on helicopter safety.
+<p></p>
+This rigorous FMEA process has provided Marenco Swisshelicopter AG with essential insights to enhance the design and safety of the SKYe SH09 helicopter, proactively mitigating risks and ensuring optimal aircraft reliability.
+</p> 
+</div>
+
+
+
+<div id="mtu" class="hidden-content">
+    <h2>MTU Aero Engines</h2>
+    <h3>Electronic module / FPGA safety analysis, reliability prediction and simulation</h3>
+<p>Engine protection and monitoring is a vital safety feature in aviation, particularly for aircraft systems where human lives depend on reliable performance. A prime example is the Electronic Protection & Monitoring Unit (EPMU) installed on the TP4-D6 engines powering the Airbus A400M military transport aircraft. The EPMU continuously monitors critical engine parameters to detect and swiftly respond to anomalies, proactively shutting down the engine to prevent hazardous situations or catastrophic failures.
+<p></p>
+<p></p> <img src="mtu-project.jpg" alt="MTU Project">
+<p></p>
+To ensure optimal operational safety and reliability, extensive analysis and testing were carried out. The project rigorously adhered to industry-standard guidelines including SAE ARP 4761 (Guidelines and Methods for Conducting the Safety Assessment Process on Civil Airborne Systems and Equipment) and SAE ARP 5580 (Recommended Failure Modes and Effects Analysis Practices for Non-Automobile Applications). For deterministic reliability prediction of electronic components, the project utilized Military Handbook MIL-HDBK-217, while mechanical reliability predictions were guided by the Naval Surface Warfare Centre's 'Handbook of Reliability Prediction Procedures for Mechanical Equipment'.
+<p></p>
+Additionally, the project addressed the critical safety concern of cosmic radiation effects on Field-Programmable Gate Arrays (FPGAs) at high altitudes, specifically Single Event Effects (SEEs) and Single Event Upsets (SEUs). These events, while not reliability issues per se, represent significant safety risks capable of inadvertently triggering critical functions. Therefore, comprehensive risk assessments were conducted using methodologies outlined in IEC TS 62396 ('Process Management for Avionics: Atmospheric Radiation Effects').
+<p></p>
+By integrating these assessments with Failure Modes, Effects, and Criticality Analysis (FMECA), a detailed Fault Tree Analysis (FTA) was performed to quantify and mitigate the likelihood of hazardous engine shutdowns. This meticulous approach ensures maximum safety, reliability, and operational effectiveness of the Airbus A400M aircraft engines.
+</p>
+</div>
+
+
+
+
+<div id="facc" class="hidden-content">
+    <h3>FACC AG</h3>
+    
+    <h3>COMAC C919 Spoiler assembly failure rate prediction - composite materials</h3>
+<p></p>
+The COMAC C919 aircraft spoiler assembly, designed and manufactured by Fischer Advanced Composite Components (FACC AG), is a critical aerodynamic component developed to ensure aircraft safety and operational reliability. Spoilers play an essential role by reducing wing lift during various flight phases, including landing and rapid descent, making their reliable performance paramount to passenger safety.
+<p></p>
+This project involved a comprehensive reliability prediction analysis to validate that the spoiler assembly would meet stringent performance and longevity requirements set by the Commercial Aircraft Corporation of China (COMAC). Specifically, the assembly was required to achieve a mean time between failures (MTBF) of 200,000 flight hours, while individual structural components targeted an impressive 1,000,000 flight hours.
+<p></p>
+    <img src="facc-project.jpg" alt="FACC Project">
+<p></p>
+
+To achieve this, the reliability analysis employed both deterministic and probabilistic methodologies. Standardised approaches from established reliability guidelines such as NSWC-10 ('Handbook of Reliability Prediction Procedures for Mechanical Equipment') and NPRD ('Non-electronic Parts Reliability Data') were utilised for conventional components. Composite materials underwent a rigorous probabilistic analysis informed by MIL-HDBK-17 ('Composite Materials Handbook'), accounting for variations in manufacturing processes and material strength.
+<p></p>
+The analysis meticulously identified and assessed potential failure points within the spoiler assembly, quantifying risks through Weibull distribution modeling. Particular attention was given to composite material reliability, recognising that material consistency during production significantly impacts operational lifespan. This nuanced understanding allowed for more accurate risk assessment and better-informed component selection.
+<p></p>
+    <img src="facc-project2.jpg" alt="FACC Project">
+<p></p>
+By integrating detailed material analysis and predictive modelling, this project ensured the COMAC C919 spoiler assembly met and exceeded rigorous reliability and safety standards, thereby significantly enhancing overall aircraft operational integrity and passenger safety.
+</div>
+
+<!-- Popup Container -->
+<div class="popup" id="logoPopup">
+    <div class="popup-content">
+        <span class="close-popup" onclick="closePopup()">&times;</span>
+        <div id="popupInnerContent"></div>
+    </div>
+</div>
+
+<!-- JavaScript for Popup Functionality -->
+<script>
+    function openPopup(contentId) {
+        const content = document.getElementById(contentId).innerHTML;
+        document.getElementById('popupInnerContent').innerHTML = content;
+        document.getElementById('logoPopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('logoPopup').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        const popup = document.getElementById('logoPopup');
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    }
+</script>
+<div style="margin-bottom: 300px;"></div>
+
+
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+
+
+<section class="cutout-text" style="background-image: url('marine.jpg');">
+    Marine
+</section>
+<div class="parallax" id="marine" style="background-image: url('marine.jpg'); height: 500px;"></div>
+<section id="marine-experience" style="text-align: center; padding: 20px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Naval & Commercial Supportability analysis (ILS)</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">In the marine sector, successful collaborations have included projects for Hagenuk Marinekommunikation and Raytheon Anschütz. Focused on Integrated Logistics Support (ILS), Reliability Block Diagrams (RBD), and Obsolescence Management, key tasks have included providing Failure Modes & Effects Analysis (FMEA) for advanced gear systems used in wave energy recovery. These solutions ensure systems are not only reliable but optimised for long-term performance at the lowest possible lifecycle cost. The ability to apply industry-leading methodologies guarantees that marine systems remain operational with minimal downtime, translating directly to reduced maintenance costs and improved safety.</p>
+</section>
+
+<!-- Customer Logos for Marine Sector -->
+<div class="customer-logos">
+    <img src="logo-RRmarine.png" alt="Rolls-Royce Marine">
+    <img src="logo-BAEsystems.png" alt="BAE Systems">
+    <img src="logo-raytheon.png" alt="Raytheon">
+    <img src="logo-hagenuk.png" alt="Hagenu communications">
+    <img src="logo-thales.png" alt="THALES">
+</div>
+
+<div style="margin-bottom: 300px;"></div>
+
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<section class="cutout-text" style="background-image: url('finance.jpg');"> Finance </section>
+<div class="parallax" id="finance" style="background-image: url('finance.jpg'); height: 500px;"></div>
+<section id="finance" style="text-align: center; padding: 20px 20px; max-width: 1100px; margin: auto;">
+<h2 style="color: #0056b3; font-size: 2em;">Active Investment & Options Trading execution</h2>
+<p style="font-size: 1.1em; line-height: 1.6;">Skills in reliability analysis and risk assessment can be applied to the finance sector to address risks associated with financial products and operations. Tasks undertaken to date include probabilistic analysis to provide clear insights into financial risk management. By applying these methods, organisations in the finance industry can make more informed decisions, minimise risk exposure, and boost confidence in their financial products and strategies.</p>
+</section>
+
+<!-- Customer Logos for Finance Sector -->
+<div class="customer-logos finance-logos">
+
+    
+
+        <div class="logo-container" onclick="openPopup('Patreon')">
+            <img src="logo-Patreon.png" alt="Patreon">
+            <div class="logo-caption">Visit Patreon page</div>
+            <div class="follower-counter" data-count="662">Patrons: <span class="count">0</span></div>
+        </div>
+       
+        <div class="logo-container" onclick="openPopup('tradingview')">
+            <img src="logo-tradingview.png" alt="Tradingview">
+            <div class="logo-caption">Visit tradingivew idea page</div>
+            <div class="follower-counter" data-count="15925">Followers: <span class="count">0</span></div>
+        </div>
+</div>
+yo
+
+
+<div style="margin-bottom: 300px;"></div>
+
+
+
+<!-- JavaScript -->
+    <script>
+        function animateCount(el, target) {
+            let current = 0;
+            const increment = Math.ceil(target / 100);
+            const update = () => {
+                current += increment;
+                if (current > target) current = target;
+                el.textContent = current.toLocaleString();
+                if (current < target) requestAnimationFrame(update);
+            };
+            update();
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counterEl = entry.target.querySelector('.count');
+                    const targetCount = parseInt(entry.target.getAttribute('data-count'), 10);
+                    animateCount(counterEl, targetCount);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.follower-counter').forEach(counter => {
+            observer.observe(counter);
+        });
+
+        function openPopup(contentId) {
+            document.getElementById('popupInnerContent').innerHTML = document.getElementById(contentId).innerHTML;
+            document.getElementById('logoPopup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('logoPopup').style.display = 'none';
+        }
+
+        window.onclick = event => {
+            if (event.target === document.getElementById('logoPopup')) closePopup();
+        };
+    </script>
+    
+    
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+
+    
+    
+
+
+
+
+
+
+
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+<section class="cutout-text" style="background-image: url('green-energy.jpg');"> Green energy </section>
+<div class="parallax" id="green-energy" style="background-image: url('green-energy.jpg'); height: 500px;"></div>
+<section id="green-energy-experience" style="text-align: center; padding: 20px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Renewable energy and energy conservation </h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">Involvement in projects such as Quiet Revolution Ltd’s vertical axis wind turbine (QR5) development highlights the ability to enhance the performance and reliability of green energy systems. Tasks undertaken involved mechanical and electronic reliability assessments and compliance with MIL-HDBK 217 standards, ensuring that renewable energy products perform efficiently in urban environments. By improving reliability, these services help optimise energy production, lower maintenance costs, and increase system longevity. This focus on reliability and sustainability is vital for advancing green energy technologies and offering cost-effective solutions to meet increasing global energy demands.</p>
+</section>
+
+<!-- Customer Logos for Renewables Sector -->
+<div class="customer-logos">
+    
+    <div class="logo-container" onclick="openPopup('quiet')">
+    <img src="logo-quietrevolution.png" alt="Quiet Revolution Ltd">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+    <div class="logo-container" onclick="openPopup('Oceaneering')">
+    <img src="logo-oceaneering.png" alt="Oceaneering">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+     <div class="logo-container" onclick="openPopup('supply')">
+    <img src="logo-supplydesign.png" alt="Supply Design Ltd">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+</div>
+
+
+<!-- Hidden Descriptive Content for Popups -->
+
+<div id="quiet" class="hidden-content">
+    <h3>Rolls-Royce Aerospace</h3>
+    <h3>Reliability & Failure Modes, Effects, & Criticality analysis.</h3>
+    <p></p>
+	The Rolls-Royce BR700-725 powerplant is a high-performance aircraft engine designed with rigorous reliability and safety standards for aviation applications. Developed from the proven BR710 engine, the BR700-725 was meticulously assessed to achieve exceptional reliability and o	perational efficiency, ensuring minimal in-flight shutdowns (IFSD) and unscheduled engine removals (UER).
+</p>
+</div>
+
+
+<div id="Oceaneering" class="hidden-content">
+    <h3>Rolls-Royce Aerospace</h3>
+    <h3>Reliability & Failure Modes, Effects, & Criticality analysis.</h3>
+    <p></p>
+	The Rolls-Royce BR700-725 powerplant is a high-performance aircraft engine designed with rigorous reliability and safety standards for aviation applications. Developed from the proven BR710 engine, the BR700-725 was meticulously assessed to achieve exceptional reliability and o	perational efficiency, ensuring minimal in-flight shutdowns (IFSD) and unscheduled engine removals (UER).
+</p>
+</div>
+
+<div id="supply" class="hidden-content">
+    <h3>Rolls-Royce Aerospace</h3>
+    <h3>Reliability & Failure Modes, Effects, & Criticality analysis.</h3>
+    <p></p>
+	The Rolls-Royce BR700-725 powerplant is a high-performance aircraft engine designed with rigorous reliability and safety standards for aviation applications. Developed from the proven BR710 engine, the BR700-725 was meticulously assessed to achieve exceptional reliability and o	perational efficiency, ensuring minimal in-flight shutdowns (IFSD) and unscheduled engine removals (UER).
+</p>
+</div>
+
+
+
+
+<div style="margin-bottom: 300px;"></div>
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<section class="cutout-text" style="background-image: url('medicine.jpg');"> Health Care </section>
+<div class="parallax" id="medicine" style="background-image: url('medicine.jpg'); height: 500px;"></div>
+<section id="medicine" style="text-align: center; padding: 20px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Health Care</h2>
+    
+    <p style="font-size: 1.1em; line-height: 1.6;">The experience working with Mallinckrodt Pharmaceuticals on the SOLAS Photopheresis treatment equipment highlights the importance of reliability in the health care industry. Tasks undertaken, such as developing a comprehensive reliability plan and ensuring compliance with FDA regulations, EU Medical Device Regulation (EU MDR), and IEC 60601-1:2024 standards, are essential for designing safe, high-performance medical equipment. This kind of reliability analysis helps reduce the risk of equipment failure, ensuring that the equipment performs as intended throughout its lifecycle. For health care providers, ensuring the safety and reliability of their equipment is paramount, and these services ensure minimal downtime and maximum performance, benefiting both healthcare providers and patients.</p>
+</section>
+<div style="margin-bottom: 300px;"></div>
+<div style="margin-bottom: 200px;"></div>
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+
+
+
+
+
+
+
+
+
+<div class="parallax" id="rail" style="background-image: url('rail.jpg'); height: 500px;"></div>
+<section id="Rail" style="text-align: center; padding: 60px 20px; max-width: 1100px; margin: auto;">
+
+<h2 style="color: #0056b3; font-size: 2em;">Rail</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">Experience with ALSTOM Transport has involved facilitating the implementation of RAMS (Reliability, Availability, Maintainability, Safety) processes in alignment with EN 50126, IEC 60812, and IEC 61508 standards. Key tasks included ensuring that rail systems not only meet technical specifications but also benefit from reduced lifecycle costs through optimised maintenance strategies. The ability to improve long-term reliability and availability while managing costs is crucial in the rail industry, where equipment uptime and cost-efficient operations are critical to maintaining schedules and minimising delays. These reliability-focused services contribute directly to operational efficiency and cost savings, making them indispensable to any rail operator.</p>
+</section>
+<div style="margin-bottom: 200px;"></div>
+
+<!-- Floating Navigation Menu -->
+<div class="floating-menu">
+    <a href="#top" class="icon">🏠</a>
+    <a href="#services" class="icon">🔧</a>
+    <a href="https://www.tradingview.com/u/without_worries/" class="icon" target="_blank">📈</a>
+    <a href="#contact" class="icon">📩</a>
+</div>
+
+<!-- TradingView Insights Section -->
+<div class="parallax" id="active-investment" style="background-image: url('trading.jpg'); height: 500px;">
+    <h2 style='text-align: center; font-size: 2em; color: white; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);'>Latest Active Investment Insights</h2>
+</div>
+<section style="text-align: center; padding: 60px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Latest Active Investment Ideas</h2>
+    <div class="tradingview-widget-container">
+        <div id="tradingview-widget"></div>
+        <script>
+            new TradingView.widget({
+                "container_id": "tradingview-widget",
+                "username": "without_worries",
+                "width": "100%",
+                "height": "400",
+                "theme": "light"
+            });
+        </script>
+    </div>
+    <p><a class="cta" href="https://www.tradingview.com/u/without_worries/" target="_blank">Visit My TradingView Profile</a></p>
+</section>
+
+
+
+<!-- Patreon Support Section -->
+<section style="text-align: center; padding: 60px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Support My Work on Patreon</h2>
+    <p>If you find my work valuable, consider supporting me on Patreon.</p>
+    <p><a class="cta" href="https://www.patreon.com/c/withoutworries" target="_blank">Support Me on Patreon</a></p>
+</section>
+
+<!-- Contact Section -->
+
+<section id="contact" style="text-align: center; padding: 60px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Got a question?</h2>
+    <form id="contact-form" action="https://formspree.io/f/mdkeobop" method="POST" style="display: flex; flex-direction: column; max-width: 500px; margin: auto; gap: 10px;">
+        <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+        <input type="email" name="email" placeholder="Your Email (Required)" required style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+        <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; resize: none;"></textarea>
+        <button type="submit" style="background: #007BFF; color: white; padding: 12px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Send Message</button>
+    </form>
+</section>
+
+</body>
+</html>

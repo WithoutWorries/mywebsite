@@ -8,342 +8,381 @@
     <title>Fraser Mackie</title>
     
 <!-- Global Styles -->
-<style>
+<link rel="stylesheet" href="styles.css">
+</head>
 
-/* Prevent Horizontal Scrolling */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
 
-/* Full-Screen Dropdown Menu Styles */
-.fullscreen-menu {
-    position: fixed; z-index: 10001;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 10001;
-}
-.fullscreen-menu nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-.fullscreen-menu nav ul li {
-    display: inline;
-}
-.fullscreen-menu nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 20px;
-    transition: 0.3s;
-}
-.fullscreen-menu nav ul li a:hover {
-    background: #007BFF;
-    border-radius: 5px;
-}
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: white; color: #333; }
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            height: 1000px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        .parallax-1 { background-image: url('hero-background.jpg'); }
-        .parallax-2 { background-image: url('industries.jpg'); background-size: contain; background-position: center; height: 500px; }
-        .parallax-3 { background-image: url('trading.jpg'); }
-        section { padding: 60px 20px; max-width: 1100px; margin: auto; background: white; box-shadow: none;  border-radius: 12px; }
-        h1 { font-size: 2.5em; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 0.5em; }
 
-h2, h3 { color: #0056b3; text-align: center; }
-        .industry-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 40px; text-align: center; }
-        .industry-item img { width: 100%; height: auto; border-radius: 12px; }
-        .cta { background: #FF5722; color: white; padding: 15px 30px; text-align: center; border-radius: 50px; font-weight: bold; display: inline-block; text-decoration: none; }
-        .cta:hover { background: #E64A19; }
-    </style>
 
-<!-- Filter and Button Styles -->
-<style>
-.filterDiv {
-            float: left;
-            background-color: #2196F3;
-            color: #ffffff;
-            width: 120px;
-            line-height: 100px;
-            text-align: center;
-            margin: 5px;
-            display: none;
-            border-radius: 8px;
-        }
-        .show { display: block; }
-        .filter-container { text-align: center; margin-top: 20px; }
-        .btn {
-            border: none;
-            outline: none;
-            padding: 12px 16px;
-            background-color: #f1f1f1;
-            cursor: pointer;
-            margin: 5px;
-            border-radius: 8px;
-        }
-        .btn:hover { background-color: #ddd; }
-        .btn.active { background-color: #666; color: white; }
-    </style>
-    
-<!-- Responsive Design -->
-<style>
-@media (max-width: 1024px) {
-            .parallax {
-                background-attachment: scroll;
-                height: 500px;
-                font-size: 2em;
-            }
-            .parallax-1, .parallax-2, .parallax-3, .parallax-4 {
-                background-size: cover;
-                background-position: center;
-            }
-            .industry-images {
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            }
-            .filterDiv {
-                width: 100px;
-                line-height: 80px;
-            }
-            .btn {
-                padding: 10px 12px;
-                font-size: 14px;
-            }
-        }
-        @media (max-width: 768px) {
-            .parallax {
-                height: 400px;
-                font-size: 1.8em;
-            }
-            section {
-                padding: 40px 15px;
-            }
-            .industry-images {
-                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-            }
-            .btn {
-                padding: 8px 10px;
-                font-size: 12px;
-            }
-            form input, form textarea, form button {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
-        @media (max-width: 480px) {
-            .parallax {
-                height: 300px;
-                font-size: 1.5em;
-            }
-            .btn {
-                padding: 6px 8px;
-                font-size: 12px;
-            }
-            .industry-images {
-                grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-            }
-        }
-    </style>
-    
-<!-- Floating Menu Styles -->
-<style>
-.floating-menu {
-            position: fixed; z-index: 10002;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .floating-menu a {
-            display: block;
-            padding: 10px;
-            margin: 5px 0;
-            color: white;
-            text-decoration: none;
-            text-align: center;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .floating-menu a:hover {
-            background: #007BFF;
-        }
-        .icon { font-size: 24px; }
-    </style>
-    </head>
+
 
 <!-- Page Body -->
 <body id="top">
 
+<!-- Hero Section -->
+<div class="parallax" id="hero" style="background-image: url('hero-background.jpg'); height: auto; min-height: 100vh; background-size: contain; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; position: relative;">
+<h1 style="color: white; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); font-size: 2em; width: 100%; text-align: right; padding-right: 20px;">Fraser Mackie</h1>
+<div style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); font-size: 0.7em; color: white; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">
+    Supportability Analysis - Reliability Prediction - Safety Analysis - Stock Market Forecasts
+    
+</div>
+
+</div>
+<section style="padding: 100px 20px; text-align: center; background-color: white; border-radius: 10px; box-shadow: none; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Reliability, Risk & Cost—Optimised for the Future</h2>
+    <p style="font-size: 1.2em; font-weight: bold;">Specialising in safety, reliability, probabilistic analysis across a wide range of industries.</p>
+    <p style="font-size: 1.1em; line-height: 1.6;">Expertise covers both deterministic and probabilistic analysis—measuring risk based on known physical limits, environmental conditions, or historical data.</p>
+    <p style="font-size: 1.1em; line-height: 1.6;">Client needs vary significantly. Some projects are driven by cost and time constraints, while others prioritise a deeper understanding of performance and design success.</p>
+    <p style="font-size: 1.2em; font-weight: bold; color: #d9534f;">Insights from past projects are applied to deliver tailored, high-impact solutions, ensuring the best possible outcomes.</p>
+</section>
+
+
+
+
+
+
+
+<div style="margin-bottom: 100px;"></div>
+
 <!-- Full-Screen Dropdown Menu -->
 <div class="fullscreen-menu">
-    
     <nav>
         <ul>
             <li><a href="#top">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#industries">Industries</a></li>
+            <li><a href="#Expertise">Expertise</a></li>
+            <li>
+                <a href="#industries">Industries</a>
+                <ul>
+                    <li><a href="#aerospace">Aerospace</a></li>
+                    <li><a href="#marine">Marine</a></li>
+                    <li><a href="#finance">Finance</a></li>
+                    <li><a href="#health-care">Health Care</a></li>
+                    <li><a href="#green-energy">Green Energy</a></li>
+                    <li><a href="#rail">Rail</a></li>
+                </ul>
+            </li>
             <li><a href="#active-investment">Active Investment</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </div>
 
+<!-- Industry Sections -->
+
+<!-- Responsive Cutout Text Effect and Customer Logo Grid with Clickable Popups using HTML Templates for Aerospace Section -->
+
+
+<div class="parallax" id="aerospace" style="background-image: url('aerospace.jpg'); height: 500px;"></div>
+<section id="aerospace-experience" style="text-align: center; padding: 0px 20px; max-width: 1100px; margin: auto;">
+
+
+<h2 style="color: #0056b3; font-size: 2em;">Fixed and Rotary Wing Aircraft Safety & Reliability analysis</h2>
     
+<p style="font-size: 1.1em; line-height: 1.6;">Experience in the aerospace sector includes collaborating with industry leaders such as Rolls-Royce Aerospace, Marenco Swisshelicopter AG, and MTU Aero Engines. Specialising in safety and reliability analysis, tasks undertaken include assessing complex systems such as the TP400 Engine Protection & Monitoring Unit for military aircraft and Lean Burn technology for Rolls-Royce engines. Proven methodologies like Failure Modes & Effects Analysis (FMEA), Weibull Analysis, and Monte Carlo simulations have been employed to predict failure rates and enhance system safety. Additionally, composite material reliability for FACC AG components has been addressed, ensuring compliance with rigorous standards like EASA (European Aviation Safety Agency) for airworthiness. These services help ensure high reliability and cost-efficiency, making them a valuable investment for any aerospace organisation.</p>
+</section>
+
+
+
+
+<!-- Customer Logos for Aerospace Sector -->
+<div class="customer-logos">
+	
+	<div class="logo-container" onclick="openPopup('case-rollsroyce.html')">
+    <img src="logo-rollsroyce.png" alt="Rolls-Royce Aerospace" onclick="openPopup('rollsroyce')">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+    
+    <div class="logo-container" onclick="openPopup('case-marenco.html')">
+    <img src="logo-marenco.png" alt="Marenco Swisshelicopter AG" onclick="openPopup('marenco')">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+   
+    <div class="logo-container" onclick="openPopup('case-mtu.html')">
+    <img src="logo-mtu.png" alt="MTU Aero Engines">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+    
+    <div class="logo-container" onclick="openPopup('case-facc.html')">
+    <img src="logo-facc.png" alt="FACC AG" onclick="openPopup('facc')">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+   
+</div>
+
+
+<!-- Popup Container -->
+<div class="popup" id="logoPopup">
+    <div class="popup-content">
+        <span class="close-popup" onclick="closePopup()">&times;</span>
+        <div id="popupInnerContent"></div>
+    </div>
+</div>
+
+
+
+<div style="margin-bottom: 300px;"></div>
+
+
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+
+
+<section class="cutout-text" style="background-image: url('marine.jpg');">
+    Marine
+</section>
+<div class="parallax" id="marine" style="background-image: url('marine.jpg'); height: 500px;"></div>
+<section id="marine-experience" style="text-align: center; padding: 20px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Naval & Commercial Supportability analysis (ILS)</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">In the marine sector, successful collaborations have included projects for Hagenuk Marinekommunikation and Raytheon Anschütz. Focused on Integrated Logistics Support (ILS), Reliability Block Diagrams (RBD), and Obsolescence Management, key tasks have included providing Failure Modes & Effects Analysis (FMEA) for advanced gear systems used in wave energy recovery. These solutions ensure systems are not only reliable but optimised for long-term performance at the lowest possible lifecycle cost. The ability to apply industry-leading methodologies guarantees that marine systems remain operational with minimal downtime, translating directly to reduced maintenance costs and improved safety.</p>
+</section>
+
+<!-- Customer Logos for Marine Sector -->
+<div class="customer-logos">
+    <img src="logo-RRmarine.png" alt="Rolls-Royce Marine">
+    <img src="logo-BAEsystems.png" alt="BAE Systems">
+    <img src="logo-raytheon.png" alt="Raytheon">
+    <img src="logo-hagenuk.png" alt="Hagenu communications">
+    <img src="logo-thales.png" alt="THALES">
+    <img src="logo-akersolutions.png" alt="AKER Solutions">
+
+    
+</div>
+
+<div style="margin-bottom: 300px;"></div>
+
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+<!-- Marine Section --><!-- Marine Section --><!-- Marine Section --><!-- Marine Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<section class="cutout-text" style="background-image: url('finance.jpg');"> Finance </section>
+<div class="parallax" id="finance" style="background-image: url('finance.jpg'); height: 500px;"></div>
+<section id="finance" style="text-align: center; padding: 20px 20px; max-width: 1100px; margin: auto;">
+<h2 style="color: #0056b3; font-size: 2em;">Active Investment & Options Trading execution</h2>
+<p style="font-size: 1.1em; line-height: 1.6;">Skills in reliability analysis and risk assessment can be applied to the finance sector to address risks associated with financial products and operations. Tasks undertaken to date include probabilistic analysis to provide clear insights into financial risk management. By applying these methods, organisations in the finance industry can make more informed decisions, minimise risk exposure, and boost confidence in their financial products and strategies.
+
+<</p>
+</section>
+
+
+
+<!-- Customer Logos for Finance Sector -->
+<div class="customer-logos finance-logos">
+
+   
+		<div class="logo-container" onclick="openPopup('patreon')">
+	    <img src="logo-Patreon.png" alt="Patreon">
+	    <div class="logo-caption">Visit Patreon page</div>
+    	<div class="follower-counter" data-count="662">Patrons: <span class="count">0</span></div>
+		</div>
+
+
+
+        <div class="logo-container" onclick="openPopup('tradingview')">
+            <img src="logo-tradingview.png" alt="Tradingview">
+            <div class="logo-caption">Visit tradingivew idea page</div>
+            <div class="follower-counter" data-count="15925">Followers: <span class="count">0</span>
+            </div>
+
+</div>
+<div style="margin-bottom: 300px;"></div>
+
+
+
+    
+    
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+<!-- Finance Section --><!-- Finance Section --><!-- Finance Section --><!-- Finance Section -->
+
+    
+    
+
+
+
+
+
+
+
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+</div>
+<div style="margin-bottom: 300px;"></div>
+
+<section class="cutout-text" style="background-image: url('green-energy.jpg');"> Green energy </section>
+<div class="parallax" id="green-energy" style="background-image: url('green-energy.jpg'); height: 500px;"></div>
+<section id="green-energy-experience" style="text-align: center; padding: 20px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Renewable energy and energy conservation </h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">Involvement in projects such as Quiet Revolution Ltd’s vertical axis wind turbine (QR5) development highlights the ability to enhance the performance and reliability of green energy systems. Tasks undertaken involved mechanical and electronic reliability assessments and compliance with MIL-HDBK 217 standards, ensuring that renewable energy products perform efficiently in urban environments. By improving reliability, these services help optimise energy production, lower maintenance costs, and increase system longevity. This focus on reliability and sustainability is vital for advancing green energy technologies and offering cost-effective solutions to meet increasing global energy demands.</p>
+</section>
+
+<!-- Customer Logos for Renewables Sector -->
+<div class="customer-logos">
+    
+    <div class="logo-container" onclick="openPopup('case-quietrevolution.html')">
+    <img src="logo-quietrevolution.png" alt="Quiet Revolution Ltd">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+    <div class="logo-container" onclick="openPopup('Oceaneering')">
+    <img src="logo-oceaneering.png" alt="Oceaneering">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+     <div class="logo-container" onclick="openPopup('supply')">
+    <img src="logo-supplydesign.png" alt="Supply Design Ltd">
+    <div class="logo-caption">Case study</div>
+    </div>
+    
+</div>
+
+
+
+<!-- Hidden Descriptive Content for Popups -->
+
+
+
+<div id="Oceaneering" class="hidden-content">
+    <h3>Rolls-Royce Aerospace</h3>
+    <h3>Reliability & Failure Modes, Effects, & Criticality analysis.</h3>
+    <p></p>
+	The Rolls-Royce BR700-725 powerplant is a high-performance aircraft engine designed with rigorous reliability and safety standards for aviation applications. Developed from the proven BR710 engine, the BR700-725 was meticulously assessed to achieve exceptional reliability and o	perational efficiency, ensuring minimal in-flight shutdowns (IFSD) and unscheduled engine removals (UER).
+</p>
+</div>
+
+<div id="supply" class="hidden-content">
+    <h3>Rolls-Royce Aerospace</h3>
+    <h3>Reliability & Failure Modes, Effects, & Criticality analysis.</h3>
+    <p></p>
+	The Rolls-Royce BR700-725 powerplant is a high-performance aircraft engine designed with rigorous reliability and safety standards for aviation applications. Developed from the proven BR710 engine, the BR700-725 was meticulously assessed to achieve exceptional reliability and o	perational efficiency, ensuring minimal in-flight shutdowns (IFSD) and unscheduled engine removals (UER).
+</p>
+</div>
+
+
+
+
+<div style="margin-bottom: 300px;"></div>
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+<!-- Green energy section --><!-- Green energy section--><!-- Green energy section --><!-- Green enegy section -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<section class="cutout-text" style="background-image: url('medicine.jpg');"> Health Care </section>
+<div class="parallax" id="medicine" style="background-image: url('medicine.jpg'); height: 500px;"></div>
+<section id="medicine" style="text-align: center; padding: 20px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Health Care</h2>
+    
+    <p style="font-size: 1.1em; line-height: 1.6;">The experience working with Mallinckrodt Pharmaceuticals on the SOLAS Photopheresis treatment equipment highlights the importance of reliability in the health care industry. Tasks undertaken, such as developing a comprehensive reliability plan and ensuring compliance with FDA regulations, EU Medical Device Regulation (EU MDR), and IEC 60601-1:2024 standards, are essential for designing safe, high-performance medical equipment. This kind of reliability analysis helps reduce the risk of equipment failure, ensuring that the equipment performs as intended throughout its lifecycle. For health care providers, ensuring the safety and reliability of their equipment is paramount, and these services ensure minimal downtime and maximum performance, benefiting both healthcare providers and patients.</p>
+</section>
+<div style="margin-bottom: 300px;"></div>
+<div style="margin-bottom: 200px;"></div>
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+<!-- Heath  care section --><!-- Heath  care section--><!-- Heath  care section --><!-- Heath  care section -->
+
+
+
+
+
+
+
+
+
+<div class="parallax" id="rail" style="background-image: url('rail.jpg'); height: 500px;"></div>
+<section id="Rail" style="text-align: center; padding: 60px 20px; max-width: 1100px; margin: auto;">
+
+<h2 style="color: #0056b3; font-size: 2em;">Rail</h2>
+    <p style="font-size: 1.1em; line-height: 1.6;">Experience with ALSTOM Transport has involved facilitating the implementation of RAMS (Reliability, Availability, Maintainability, Safety) processes in alignment with EN 50126, IEC 60812, and IEC 61508 standards. Key tasks included ensuring that rail systems not only meet technical specifications but also benefit from reduced lifecycle costs through optimised maintenance strategies. The ability to improve long-term reliability and availability while managing costs is crucial in the rail industry, where equipment uptime and cost-efficient operations are critical to maintaining schedules and minimising delays. These reliability-focused services contribute directly to operational efficiency and cost savings, making them indispensable to any rail operator.</p>
+</section>
+<div style="margin-bottom: 200px;"></div>
+
 <!-- Floating Navigation Menu -->
 <div class="floating-menu">
-        <a href="#top" class="icon">🏠</a>
-        <a href="#services" class="icon">🔧</a>
-        <a href="https://www.tradingview.com/u/without_worries/" class="icon" target="_blank">📈</a>
-        <a href="#contact-form" class="icon">📩</a>
-    </div>
-    
-<!-- Hero Section -->
-<div class="parallax parallax-1" style="display: flex; justify-content: flex-end; align-items: center; padding-right: 100px; text-align: right; width: 100%; position: relative;">
-        <div style="position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); font-size: 0.5em; color: white; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">
-            Supportability Analysis - Reliability Prediction - Safety Analysis - Stock Market Forecasts
-        </div>
-        <h1 style="text-align: right;">Fraser Mackie</h1>
-    </div>
-    
-<div class="parallax parallax-2"></div>
-
-<!-- Solutions Section -->
-<section style="padding: 270px 20px; text-align: center; background-color: white; border-radius: 10px; box-shadow: none;">
-    <h2 style="color: #0056b3; font-size: 2em;">Reliability, Risk & Cost—Optimised for the Future</h2>
-    <p style="font-size: 1.2em; font-weight: bold;">Specialising in safety and reliability analysis across a wide range of industries.</p>
-    <p style="font-size: 1.1em; line-height: 1.6;">Expertise covers both deterministic and probabilistic analysis—measuring risk based on known physical limits, environmental conditions, or historical data.</p>
-    <p style="font-size: 1.1em; line-height: 1.6;">Client needs vary significantly. Some projects are driven by cost and time constraints, while others prioritise a deeper understanding of performance and design success.</p>
-    <p style="font-size: 1.2em; font-weight: bold; color: #d9534f;">Insights from past projects are applied to deliver tailored, high-impact solutions, ensuring the best possible outcomes.</p>
-    
-    
-    
-        
-    <div style="margin-bottom: 80px;"></div>
-</section>
-    
-    
-<!-- Industry Reference Section -->
-<section id="industry-reference">
-    <h2>Safety & Reliability Prediction, Ownership Cost Analysis, Stock Price Prediction & Analysis, and More</h2>
-    <h2>Solutions to Problems with Scalable Results</h2>
-    <p>With over two decades of experience in safety and reliability engineering across industries like aerospace, marine, pharmaceuticals, and renewable energy, we provide expert guidance to ensure the integrity and efficiency of your projects.</p>
-    <h2>Industry Expertise</h2>
-    <p>This section serves as a reference point for industries where my expertise has been applied, including safety analysis, reliability prediction, and cost forecasting.</p>
-</section>
-        <div class="filterDiv marine">Marine</div>
-        <div class="filterDiv pharmaceuticals">Pharmaceuticals</div>
-
-<!-- JavaScript for Filtering Industries -->
-<script>
-function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("filterDiv");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-            }
-        }
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
-            }
-        }
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                }
-            }
-            element.className = arr1.join(" ");
-        }
-        var btnContainer = document.getElementsByClassName("filter-container")[0];
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-        filterSelection("all");
-    </script>
-    
-<!-- Notable Industries Section -->
-<section>
-    <h2>Notable Industries</h2>
-    <p>This section highlights key industries where my expertise in reliability prediction, safety analysis, and cost forecasting has been applied.</p>
-</section>
-    
-<!-- TradingView Insights Section -->
-<div class="parallax parallax-3">Latest Active Investment Insights</div>
-    
-<!-- TradingView Widget Embed -->
-<section>
-<h2>My Latest Active Investment Ideas</h2>
-        <div class="tradingview">
-            <div class="tradingview-widget-container">
-    <div id="tradingview-widget"></div>
-    <script>
-        new TradingView.widget({
-            "container_id": "tradingview-widget",
-            "username": "without_worries",
-            "width": "100%",
-            "height": "400",
-            "theme": "light"
-        });
-    </script>
+    <a href="#top" class="icon">🏠</a>
+    <a href="#services" class="icon">🔧</a>
+    <a href="https://www.tradingview.com/u/without_worries/" class="icon" target="_blank">📈</a>
+    <a href="#contact" class="icon">📩</a>
 </div>
-        </div>
-        <p style="text-align: center;"><a class="cta" href="https://www.tradingview.com/u/without_worries/" target="_blank">Visit My TradingView Profile</a></p>
-    </section>
-    
-<!-- Footer and Contact Section -->
-<footer style="position: relative; width: 100%; bottom: 0; text-align: center; padding: 20px; background: #222; color: white;">
-        <p>&copy; 2025 Fraser Mackie - All Rights Reserved</p>
-        <div class="parallax parallax-4">Contact Me</div>
-    <section>
-        <h2>Contact Me</h2>
-        <form id="contact-form" action="https://formspree.io/f/mdkeobop" method="POST" style="display: flex; flex-direction: column; max-width: 500px; margin: auto; gap: 10px;">
-            <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
-            <input type="email" name="email" placeholder="Your Email (Required)" required style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
-            <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; resize: none;"></textarea>
-            <button type="submit" style="background: #007BFF; color: white; padding: 12px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Send Message</button>
-        </form>
-    </section>
-</footer>
+
+<!-- TradingView Insights Section -->
+<div class="parallax" id="active-investment" style="background-image: url('trading.jpg'); height: 500px;">
+    <h2 style='text-align: center; font-size: 2em; color: white; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);'>Latest Active Investment Insights</h2>
+</div>
+<section style="text-align: center; padding: 60px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Latest Active Investment Ideas</h2>
+    <div class="tradingview-widget-container">
+        <div id="tradingview-widget"></div>
+        <script>
+            new TradingView.widget({
+                "container_id": "tradingview-widget",
+                "username": "without_worries",
+                "width": "100%",
+                "height": "400",
+                "theme": "light"
+            });
+        </script>
+    </div>
+    <p><a class="cta" href="https://www.tradingview.com/u/without_worries/" target="_blank">Visit My TradingView Profile</a></p>
+</section>
+
+
+
+<!-- Patreon Support Section -->
+<section style="text-align: center; padding: 60px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Support My Work on Patreon</h2>
+    <p>If you find my work valuable, consider supporting me on Patreon.</p>
+    <p><a class="cta" href="https://www.patreon.com/c/withoutworries" target="_blank">Support Me on Patreon</a></p>
+</section>
+
+<!-- Contact Section -->
+
+<section id="contact" style="text-align: center; padding: 60px 20px; max-width: 1100px; margin: auto;">
+    <h2 style="color: #0056b3; font-size: 2em;">Got a question?</h2>
+    <form id="contact-form" action="https://formspree.io/f/mdkeobop" method="POST" style="display: flex; flex-direction: column; max-width: 500px; margin: auto; gap: 10px;">
+        <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+        <input type="email" name="email" placeholder="Your Email (Required)" required style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+        <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; resize: none;"></textarea>
+        <button type="submit" style="background: #007BFF; color: white; padding: 12px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Send Message</button>
+    </form>
+</section>
+
+
+
+<!-- JavaScript for Popup Functionality -->
+<script src="scripts.js"></script>
 </body>
 </html>

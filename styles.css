@@ -1,0 +1,299 @@
+
+/* Floating Menu Styles */
+.floating-menu {
+    position: fixed;
+    z-index: 10002;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+.floating-menu a {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.floating-menu a:hover {
+    background: #007BFF;
+}
+.icon { font-size: 24px; }
+
+
+/* Dropdown Menu Styling */
+.fullscreen-menu nav ul li {
+    position: relative;
+}
+.fullscreen-menu nav ul li ul {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    text-align: left;
+    border-radius: 5px;
+}
+.fullscreen-menu nav ul li:hover ul {
+    display: block;
+}
+.fullscreen-menu nav ul li ul li {
+    display: block;
+}
+.fullscreen-menu nav ul li ul li a {
+    display: block;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.fullscreen-menu nav ul li ul li a:hover {
+    background: #007BFF;
+}
+
+/* Prevent Horizontal Scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+
+
+/* Full-Screen Dropdown Menu Styles */
+.fullscreen-menu {
+    position: fixed; z-index: 10001;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 10001;
+}
+.fullscreen-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.fullscreen-menu nav ul li {
+    display: inline;
+}
+.fullscreen-menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.fullscreen-menu nav ul li a:hover {
+    background: #007BFF;
+    border-radius: 5px;
+}
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: white; color: #333; }
+        .parallax {
+            background-attachment: fixed;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        
+        
+        
+        
+         /* Follower Counter Styles */
+        .follower-counter {
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #0056b3;
+        }
+        
+
+    .cutout-text {
+        background-image: url('aerospace.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: transparent;
+        font-size: 8vw;
+        font-weight: bold;
+        text-transform: capitalize;
+        -webkit-background-clip: text;
+        background-clip: text;
+        position: relative;
+        text-align: center;
+    }
+
+    .cutout-text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: -1;
+    }
+
+    /* Customer Logos Grid */
+    .customer-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 20px;
+        background-color: #f8f9fa;
+    }
+
+        .logo-container {
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            height: 120px; /* Fixed height for uniform logo containers */
+        }
+        
+
+    .logo-caption {
+        font-size: 0.8em;
+        color: #0056b3;
+        margin-top: 5px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+    .logo-container:hover .logo-caption {
+        opacity: 1;
+    }
+    
+    
+
+    .customer-logos img {
+        width: auto;
+        max-width: 150px;
+        max-height: 100px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.8;
+        transition: opacity 0.3s, filter 0.3s;
+        cursor: pointer;
+    }
+
+    .customer-logos img:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+
+    /* Popup styles */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 10003;
+    }
+
+    .popup-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+        text-align: left;
+        position: relative;
+        overflow-y: auto;
+        max-height: 80vh;
+        line-height: 1.8;
+    }
+
+    .popup-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-top: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+
+
+    .close-popup {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .hidden-content {
+        display: none;
+    }
+    
+    
+    
+    /* used to report tradingview count */
+      .follower-counter {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .follower-counter .count {
+    font-size: 3em;
+    font-weight: bold;
+    color: #0056b3;
+  }
+
+
+  .follower-counter .label {font-size: 1.2em;color: #333;}
+    
+    
+    .finance-logos .logo-container {
+    flex-direction: column; /* Ensures horizontal alignment */
+    align-items: center;
+    justify-content: center; 
+}
+    
+
+
