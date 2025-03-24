@@ -20,6 +20,7 @@
 
 
 
+
 <!-- JavaScript animated count -->
 
         function animateCount(el, target) {
@@ -68,13 +69,23 @@
 
 function openPopup(filePath) {
     fetch(filePath)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) throw new Error('File not found');
+            return response.text();
+        })
         .then(html => {
             document.getElementById('popupInnerContent').innerHTML = html;
             document.getElementById('logoPopup').style.display = 'flex';
         })
         .catch(err => {
-            document.getElementById('popupInnerContent').innerHTML = '<p>Error loading content.</p>';
-            console.error('Popup load error:', err);
+            const fallback = document.getElementById(filePath); // e.g. fallback id="case-patreon"
+            if (fallback) {
+                document.getElementById('popupInnerContent').innerHTML = fallback.innerHTML;
+                document.getElementById('logoPopup').style.display = 'flex';
+            } else {
+                document.getElementById('popupInnerContent').innerHTML = '<p>Case study not available.</p>';
+            }
         });
 }
+
+
