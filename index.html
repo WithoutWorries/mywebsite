@@ -627,8 +627,8 @@ footer a:hover{color:var(--cream)}
             <label for="fmessage">Message</label>
             <textarea id="fmessage" name="message" placeholder="Briefly describe your project or requirements..." required></textarea>
           </div>
-          <button class="form-submit" type="submit">Send Message &rarr;</button>
-          <p class="form-note">Sent securely via Formspree &mdash; I'll reply as soon as possible.</p>
+          <button class="form-submit" type="submit" id="form-submit-btn">Send Message &rarr;</button>
+          <p class="form-note" id="form-note">Sent securely &mdash; I'll reply as soon as possible.</p>
         </form>
       </div>
     </div>
@@ -711,6 +711,60 @@ document.querySelectorAll('.reveal, .timeline-entry').forEach(function(el, i) {
   }
   observer.observe(el);
 });
+
+// Contact form — dual submission: Formspree (email) + SoloCRM (CRM record)
+(function() {
+  // !! Replace with your actual Vercel deployment URL !!
+  var CRM_URL = 'https://crm-8qu1.vercel.app/api/webhook/website-contact';
+  var CRM_SECRET = '947005985fd90ed7db40f31751aee41bf441f9b9e921fcc7';
+
+  var form = document.getElementById('contact-form');
+  var btn = document.getElementById('form-submit-btn');
+  var note = document.getElementById('form-note');
+
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    var name = document.getElementById('fname').value;
+    var email = document.getElementById('femail').value;
+    var message = document.getElementById('fmessage').value;
+
+    // Post to Formspree and CRM concurrently
+    var formspreeData = new FormData();
+    formspreeData.append('name', name);
+    formspreeData.append('email', email);
+    formspreeData.append('message', message);
+
+    var formspree = fetch('https://formspree.io/f/mdkeobop', {
+      method: 'POST',
+      body: formspreeData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    var crm = fetch(CRM_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, message: message, secret: CRM_SECRET })
+    });
+
+    Promise.allSettled([formspree, crm]).then(function() {
+      btn.textContent = 'Message sent \u2713';
+      note.textContent = "Thank you \u2014 I'll be in touch shortly.";
+      note.style.color = 'var(--steel)';
+      form.reset();
+      setTimeout(function() {
+        btn.disabled = false;
+        btn.textContent = 'Send Message \u2192';
+        note.textContent = "Sent securely \u2014 I'll reply as soon as possible.";
+        note.style.color = '';
+      }, 5000);
+    });
+  });
+})();
 </script>
 </body>
 </html>
