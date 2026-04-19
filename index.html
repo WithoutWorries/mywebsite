@@ -187,6 +187,7 @@ footer a:hover{color:var(--cream)}
     <li><a href="#experience">Experience</a></li>
     <li><a href="#industries">Industries</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="https://crm.frasermackie.com" style="color:var(--steel);border:1px solid var(--steel-xs);padding:.25rem .75rem;border-radius:2rem;font-size:.75rem;transition:all .25s;" onmouseover="this.style.borderColor='var(--steel)';this.style.background='var(--steel-xs)'" onmouseout="this.style.borderColor='var(--steel-xs)';this.style.background='transparent'">Login</a></li>
   </ul>
 </nav>
 
@@ -714,6 +715,7 @@ document.querySelectorAll('.reveal, .timeline-entry').forEach(function(el, i) {
 
 // Contact form — dual submission: Formspree (email) + SoloCRM (CRM record)
 (function() {
+  // !! Replace with your actual Vercel deployment URL !!
   var CRM_URL = 'https://crm.frasermackie.com/api/webhook/website-contact';
   var CRM_SECRET = '947005985fd90ed7db40f31751aee41bf441f9b9e921fcc7';
 
